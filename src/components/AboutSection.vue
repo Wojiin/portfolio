@@ -15,6 +15,7 @@ const levels = [
 ]
 
 const animateBars = ref(false)
+const aboutHeroImageSrc = `${import.meta.env.BASE_URL}img/aboutheroportrait.png`
 
 const restartBarsAnimation = async () => {
   animateBars.value = false
@@ -81,7 +82,7 @@ onMounted(() => {
           <div class="relative h-[25.5rem] w-[25.5rem] sm:h-[25.5rem] sm:w-[25.5rem]">
             <div class="absolute inset-0 overflow-hidden border-4 border-black bg-cyan-400"
               :class="isDarkMode ? 'border-cyan-400 shadow-[8px_8px_0_0_#22d3ee]' : 'shadow-[8px_8px_0_0_#000]'">
-              <img src="/img/aboutheroportrait.png" alt="Portrait de presentation" class="h-full w-full object-cover" />
+              <img :src="aboutHeroImageSrc" alt="Portrait de presentation" class="h-full w-full object-cover" />
             </div>
             <div class="absolute left-8 top-8 h-full w-full border-4 border-pink-500"></div>
             <div class="absolute left-16 top-16 h-full w-full border-4 border-yellow-300"></div>

@@ -55,7 +55,7 @@ const headerImageSrc = computed(() => {
     return ''
   }
 
-  return `/img/${props.projectIndex}projectcardportrait.png`
+  return `${import.meta.env.BASE_URL}img/${props.projectIndex}projectcardportrait.png`
 })
 
 watch(

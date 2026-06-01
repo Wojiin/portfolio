@@ -17,6 +17,7 @@ defineProps({
 })
 
 const emit = defineEmits(['select-section'])
+const homeHeroImageSrc = `${import.meta.env.BASE_URL}img/homeheroportrait.png`
 
 const handleSectionClick = (sectionId) => {
   emit('select-section', sectionId)
@@ -37,7 +38,7 @@ const handleSectionClick = (sectionId) => {
       <div class="relative z-0">
         <div
           class="relative z-10 flex h-64 w-64 items-center justify-center overflow-hidden border-8 border-black bg-gradient-to-br from-cyan-400 to-pink-500 sm:h-80 sm:w-80">
-          <img src="/img/homeheroportrait.png" alt="Portrait de Wojiin" class="h-full w-full object-cover" />
+          <img :src="homeHeroImageSrc" alt="Portrait de Wojiin" class="h-full w-full object-cover" />
           <div
             class="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(0,0,0,0.1)_0,rgba(0,0,0,0.1)_1px,transparent_1px,transparent_2px)]">
           </div>
