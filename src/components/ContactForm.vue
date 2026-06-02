@@ -35,12 +35,12 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section class="relative overflow-hidden bg-black py-20 h-full text-white sm:py-28" aria-labelledby="contact-title">
+  <section class="relative isolate flex min-h-full w-full flex-col justify-center overflow-hidden bg-black text-white">
     <div
-      class="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,#22d3ee_2px,#22d3ee_4px)]">
+      class="pointer-events-none absolute inset-0 opacity-10 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,#22d3ee_2px,#22d3ee_4px)]">
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8">
       <div class="mb-16 text-center">
         <h2 id="contact-title" class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
           CONTACT
@@ -48,7 +48,7 @@ const handleSubmit = () => {
         <div class="mx-auto mt-4 h-2 w-32 bg-pink-500"></div>
       </div>
 
-      <div class="mx-auto max-w-2xl">
+      <div class="mx-auto w-full max-w-2xl">
         <div class="relative">
           <div
             class="pointer-events-none absolute -inset-6 animate-pulse rounded-[0.75rem] bg-cyan-400/30 blur-3xl [animation-duration:2.8s]">

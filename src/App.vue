@@ -84,7 +84,7 @@ const handleSectionNavigation = (sectionId) => {
       :frame-gradient-style="frameGradientStyle" @select-section="handleSectionNavigation"
       @toggle-theme="toggleTheme" />
 
-    <main class="relative z-20 flex-1 overflow-hidden">
+    <main class="relative z-20 flex flex-1 overflow-hidden">
       <div v-if="usesSharedOverlay" class="pointer-events-none absolute inset-0 z-0 bg-white/72 backdrop-blur-[2px]"
         :class="isDarkMode ? 'bg-zinc-950/74' : 'bg-white/72'"></div>
       <div v-if="activeSectionId === 'home'"
@@ -94,13 +94,13 @@ const handleSectionNavigation = (sectionId) => {
         enter-from-class="translate-x-10 opacity-0" enter-to-class="translate-x-0 opacity-100"
         leave-active-class="transition duration-700 ease-out" leave-from-class="translate-x-0 opacity-100"
         leave-to-class="-translate-x-10 opacity-0">
-        <component :is="currentSection.component" :key="activeSectionId" class="relative z-10 h-full"
+        <component :is="currentSection.component" :key="activeSectionId" class="relative z-10 flex-1"
           :is-dark-mode="isDarkMode" :sections="currentSection.id === 'home' ? heroSections : undefined"
           :active-section="activeSectionId" @select-section="handleSectionNavigation" />
       </Transition>
     </main>
 
-    <footer class="relative py-8 transition-colors duration-500" style="z-index: 20"
+    <footer class="relative shrink-0 py-8 transition-colors duration-500" style="z-index: 20"
       :class="isDarkMode ? 'bg-zinc-950' : 'bg-white'">
       <div class="absolute inset-x-0 top-0 h-1 transition-[background-position] duration-700 ease-out"
         :style="frameGradientStyle"></div>
