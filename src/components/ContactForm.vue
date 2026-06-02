@@ -35,7 +35,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section class="relative overflow-hidden bg-black py-20 text-white sm:py-28" aria-labelledby="contact-title">
+  <section class="relative overflow-hidden bg-black py-20 h-full text-white sm:py-28" aria-labelledby="contact-title">
     <div
       class="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,#22d3ee_2px,#22d3ee_4px)]">
     </div>
