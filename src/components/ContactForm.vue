@@ -35,12 +35,14 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section class="relative isolate flex min-h-full w-full flex-col justify-center overflow-hidden bg-black text-white">
+  <section
+    class="relative isolate flex h-full min-h-full w-full flex-1 self-stretch flex-col justify-center overflow-hidden bg-black text-white">
     <div
       class="pointer-events-none absolute inset-0 opacity-10 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,#22d3ee_2px,#22d3ee_4px)]">
     </div>
 
-    <div class="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8">
+    <div
+      class="relative z-10 mx-auto flex h-full min-h-full w-full max-w-7xl flex-1 flex-col justify-center px-4 py-10 sm:px-6 lg:px-8">
       <div class="mb-16 text-center">
         <h2 id="contact-title" class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
           CONTACT

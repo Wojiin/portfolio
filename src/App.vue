@@ -63,7 +63,7 @@ const handleSectionNavigation = (sectionId) => {
 
 <template>
   <div :class="[
-    'flex min-h-screen flex-col font-[Space_Grotesk] transition-colors duration-500',
+    'flex h-screen flex-col font-[Space_Grotesk] transition-colors duration-500',
     isDarkMode ? 'bg-zinc-950 text-white' : 'bg-white text-black',
   ]">
     <div class="pointer-events-none fixed inset-0 z-0 transition-[background-position,opacity] duration-700 ease-out"
@@ -84,7 +84,7 @@ const handleSectionNavigation = (sectionId) => {
       :frame-gradient-style="frameGradientStyle" @select-section="handleSectionNavigation"
       @toggle-theme="toggleTheme" />
 
-    <main class="relative z-20 flex flex-1 overflow-hidden">
+    <main class="relative z-20 flex flex-1 items-stretch overflow-hidden">
       <div v-if="usesSharedOverlay" class="pointer-events-none absolute inset-0 z-0 bg-white/72 backdrop-blur-[2px]"
         :class="isDarkMode ? 'bg-zinc-950/74' : 'bg-white/72'"></div>
       <div v-if="activeSectionId === 'home'"
@@ -94,7 +94,7 @@ const handleSectionNavigation = (sectionId) => {
         enter-from-class="translate-x-10 opacity-0" enter-to-class="translate-x-0 opacity-100"
         leave-active-class="transition duration-700 ease-out" leave-from-class="translate-x-0 opacity-100"
         leave-to-class="-translate-x-10 opacity-0">
-        <component :is="currentSection.component" :key="activeSectionId" class="relative z-10 flex-1"
+        <component :is="currentSection.component" :key="activeSectionId" class="relative z-10 flex h-full flex-1 self-stretch"
           :is-dark-mode="isDarkMode" :sections="currentSection.id === 'home' ? heroSections : undefined"
           :active-section="activeSectionId" @select-section="handleSectionNavigation" />
       </Transition>
